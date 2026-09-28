@@ -2,5 +2,5 @@ url: https://github.com/Neptune810/dsh-model-router
 name: Neptune810/dsh-model-router
 category: model
 description:
-  en: Sets the DeepSeek flash model's reasoning effort per step — low for a cheap or plain request, high for engineering work and agent tool loops — and raises it only on repeated tool failures. Thinking stays on, because DeepSeek rejects a thinking-enabled request whose history contains a tool call made with thinking off. The model itself never changes; effort max is opt-in.
-  zh: 按步骤设置 DeepSeek flash 模型的思考等级：廉价或普通请求用 low，工程类工作与 agent 工具循环用 high，只有反复出现工具失败才继续升档。思考始终保持开启——DeepSeek 会拒绝「历史里存在关闭思考时产生的工具调用」的思考模式请求。模型本身不会改变，max 档需手动开启。
+  en: Routes each step to a model from a user-defined pool and sets its reasoning effort — low for cheap or plain requests, high for engineering work — while a manual pick always overrides the router. Three authorization scopes (model + effort, effort only, model only), task presets that weight models per task type including third-party providers, and thinking kept on because DeepSeek rejects a tool call made with thinking off.
+  zh: 按用户定义的模型池为每个步骤选模型并设置思考等级——廉价/普通请求用 low，工程类工作用 high——你手动选的模型永远优先。三种授权模式（模型+思考、只调思考、只调模型）、按任务类型给模型加权的任务预设（支持第三方 provider），并保持思考常开，因为 DeepSeek 会拒绝关闭思考时产生的工具调用。
